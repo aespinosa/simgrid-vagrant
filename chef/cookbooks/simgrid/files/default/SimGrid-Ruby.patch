@@ -1,0 +1,20 @@
+diff --git a/FindRubySimgrid.cmake b/FindRubySimgrid.cmake
+index 3442de1..bf74353 100644
+--- a/FindRubySimgrid.cmake
++++ b/FindRubySimgrid.cmake
+@@ -29,7 +29,7 @@ if(RUBY_LIBRARY)
+ 	set(LIB_RUBY_VERSION "${RUBY_VERSION_MAJOR}.${RUBY_VERSION_MINOR}.${RUBY_VERSION_PATCH}")
+ 	message(STATUS "Lib ruby version: ${LIB_RUBY_VERSION}")
+ 
+-	string(REGEX MATCH "ruby.*[0-9]" RUBY_LIBRARY_NAME ${RUBY_LIBRARY})
++	#string(REGEX MATCH "ruby.*[0-9]" RUBY_LIBRARY_NAME ${RUBY_LIBRARY})
+ 	if(NOT RUBY_LIBRARY_NAME)
+ 		set(RUBY_LIBRARY_NAME ruby)
+ 		string(REGEX REPLACE "libruby.*" "" RUBY_LIBRARY ${RUBY_LIBRARY})
+@@ -57,4 +57,4 @@ endif(RUBY_LIBRARY)
+ 
+ if(NOT RUBY_EXECUTABLE)
+ 	message(STATUS "Warning: you are missing the ruby executable, so you can compile and build examples but can't execute them!")
+-endif(NOT RUBY_EXECUTABLE)
+\ No newline at end of file
++endif(NOT RUBY_EXECUTABLE)
